@@ -1,0 +1,21 @@
+Crear 3 usuarios
+	users.objects.create(first_name="Sergio",last_name="Ananias", email_address="sergioa@gmail.com", age=26)
+	users.objects.create(first_name="McLovin",last_name="Honolulu", email_address="McLovin@gmail.com", age=38)
+	user.objects.create(first_name="Neil",last_name="Armstrong", email_address="Armstronng@gmail.com", age=82)
+Recuperar todos los registros
+	all= user.objects.all()
+recuperar el primer usuario
+	first= user.objects.first()
+recuperar el ultimo usuario
+	last= user.objects.last()
+Cambiar el usuario con id=3 para que su apellido sea Pancakes
+	id3 = user.objects.get(id=3)
+	id3.last_name = 'Pancakes'
+	id3.save()
+Eliminar el usuario con id = 2
+	id2 = user.objects.get(id=2)
+	id2.delete()
+Ordenados por su nombre
+	byname= user.objects.order_by('first_name')
+Ordenados por nombre descendente
+	descname= user.objects.order_by('-first_name')
